@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 1</title>
+</head>
+<body>
+    <h1>Welcome to DAY 1 of Learning <a href="https://youtube.com/playlist?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X&si=NleBf3N5nbt6GnVK" target="_blank">Web devlopment</a> with <a href="https://www.youtube.com/@CoderArmy9" target="_blank">Coder army</a></h1>
+    <h2>How Does Internet Work</h2>
+
+  <h3>Principle 1: The Need to Share Information</h3>
+  <p>The most fundamental truth is that we have information on one computer (A) and we want it to be on another computer (B). 
+  At first, we can transfer with USB drives but that doesn’t scale. The logical solution is direct connections with cables that transmit signals (1s and 0s). 
+  This creates the most basic form of a network.</p>
+
+  <h3>Principle 2: The Problem of Scale</h3>
+  <p>Direct links between every computer don’t scale. The solution: a central device (Switch). Each computer connects to the switch, enabling Local Networks.</p>
+
+  <h3>Principle 3: The Problem of Connecting Networks</h3>
+  <p>Local Networks can’t scale globally. The solution: Routers connect multiple networks together, forming a “network of networks” — the Internet.</p>
+
+  <h3>Principle 4: The Problem of Finding Anyone (Addressing)</h3>
+  <p>We need unique addresses to find computers. Solution: <b>IP Address</b>. Routers forward messages based on IPs, ensuring packets reach the destination.</p>
+
+  <h3>Principle 5: The Problem of Reliability and Fairness</h3>
+  <p>Large files are split into smaller <b>Packets</b> with sender, receiver, and sequence number. 
+  They travel independently and reassemble at destination. Protocol used: <b>TCP/IP</b>.</p>
+
+  <h2>Summary from First Principles</h2>
+  <ul>
+    <li>Share data → Direct connection</li>
+    <li>Connect many computers → Local Network</li>
+    <li>Connect many networks → Routers (Internet)</li>
+    <li>Find a computer → IP Address</li>
+    <li>Reliable transfer → TCP/IP and Packets</li>
+  </ul>
+
+  <h2>IP Address</h2>
+  <p><b>IPv4:</b> 32-bit, ~4.3 billion addresses (e.g., 172.217.16.142). Problem: exhaustion.</p>
+  <p><b>Public IP:</b> Globally unique, assigned by ISP.</p>
+  <p><b>Private IP:</b> Used inside local networks (e.g., 192.168.x.x).</p>
+  <p><b>IPv6:</b> 128-bit, ~340 undecillion addresses (example: 2001:0db8:85a3::8a2e:0370:7334).</p>
+
+  <h2>MAC Address</h2>
+  <p>Unique 48-bit hardware identifier (example: <code>3C:22:FB:A3:B4:C5</code>).</p>
+  <ul>
+    <li>Windows: <code>ipconfig /all</code> or <code>getmac /v</code></li>
+    <li>MacOS: <code>ifconfig</code></li>
+  </ul>
+
+  <h2>Port Numbers</h2>
+  <p>Range: 0–65535. Categories:</p>
+  <ul>
+    <li><b>Well-Known Ports (0–1023):</b> HTTP 80, HTTPS 443, FTP 21, SSH 22, DNS 53</li>
+    <li><b>Registered Ports (1024–49151):</b> React/Node.js 3000, MySQL 3306, PostgreSQL 5432, MongoDB 27017</li>
+    <li><b>Dynamic/Ephemeral (49152–65535):</b> Used temporarily by clients</li>
+  </ul>
+
+  <h2>DNS (Domain Name System)</h2>
+  <p>Translates domain names into IPs.</p>
+  <ol>
+    <li><b>Check Local Cache</b> (browser, OS, router)</li>
+    <li><b>Recursive Resolver</b> (ISP or Google’s 8.8.8.8)</li>
+    <li><b>Hierarchical Search:</b> Root → TLD → Authoritative Server</li>
+    <li><b>Journey Back:</b> Resolver caches and sends IP to browser</li>
+    <li><b>Final Connection:</b> Browser connects to server using IP + Port</li>
+  </ol>
+</body>
+</html>

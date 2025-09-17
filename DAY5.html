@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 5</title>
+</head>
+<body>
+    <h1>Welcome to DAY 5 of Learning <a href="https://youtube.com/playlist?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X&si=NleBf3N5nbt6GnVK" target="_blank">Web devlopment</a> with <a href="https://www.youtube.com/@CoderArmy9" target="_blank">Coder army</a></h1>
+     <h2>Forms in HTML</h2>
+
+  <div class="section">
+    <h2>The First Principle: The Web Needs to Be a Two-Way Street</h2>
+    <p>
+      A website isn’t just a brochure. The web needs a way to <strong>collect information from the user</strong> 
+      and send it back to the server. Without this, you couldn’t log in, search, buy, or post.
+    </p>
+
+    <h3>The Core Problem</h3>
+    <ol>
+      <li><strong>Display</strong> interactive fields (text boxes, checkboxes, dropdowns).</li>
+      <li><strong>Package</strong> the user’s data neatly.</li>
+      <li><strong>Send</strong> that package to a server.</li>
+      <li><strong>Tell</strong> the server how the data is being sent.</li>
+    </ol>
+    <p>✅ The solution is the HTML <code>&lt;form&gt;</code> element.</p>
+  </div>
+
+  <div class="section">
+    <h2>The &lt;input&gt; Element: The Box for Your Stuff</h2>
+    <p>The most common form tag. Its behavior depends on the <code>type</code> attribute.</p>
+    <p>Example:</p>
+    <pre><code>&lt;form&gt;
+  &lt;input type="text"&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>The Need for Meaning - The &lt;label&gt;</h2>
+    <p><strong>Problem:</strong> A box is meaningless without a description.</p>
+    <p><strong>Solution:</strong> Add a <code>&lt;label&gt;</code> to describe the input.</p>
+    <pre><code>&lt;label&gt;First Name:&lt;/label&gt;
+&lt;input type="text"&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>The Need for Connection - id and for</h2>
+    <p>Use <code>id</code> on input and <code>for</code> on label for accessibility and usability.</p>
+    <pre><code>&lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+&lt;input type="text" id="firstName"&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>The Need for Submission - &lt;form&gt; and Submit</h2>
+    <p>Wrap inputs inside a <code>&lt;form&gt;</code> and add a submit button.</p>
+    <pre><code>&lt;form&gt;
+  &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName"&gt;
+
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;
+  &lt;input type="text" id="lastName"&gt;
+
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>The Need for Data Identification - name Attribute</h2>
+    <p>Use <code>name</code> to label the submitted data.</p>
+    <pre><code>&lt;form&gt;
+  &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName" name="firstName"&gt;
+
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;label for="lastName"&gt;Last Name:&lt;/label&gt;
+  &lt;input type="text" id="lastName" name="lastName"&gt;
+
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Radio Buttons - Select One</h2>
+    <pre><code>&lt;label&gt;T-Shirt Size:&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="radio" id="sizeS" name="shirtSize" value="small"&gt;
+&lt;label for="sizeS"&gt;Small&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="radio" id="sizeM" name="shirtSize" value="medium"&gt;
+&lt;label for="sizeM"&gt;Medium&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="radio" id="sizeL" name="shirtSize" value="large"&gt;
+&lt;label for="sizeL"&gt;Large&lt;/label&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Checkboxes - Select Many</h2>
+    <pre><code>&lt;label&gt;Pizza Toppings:&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingPep" name="toppings" value="pepperoni"&gt;
+&lt;label for="toppingPep"&gt;Pepperoni&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingMush" name="toppings" value="mushrooms"&gt;
+&lt;label for="toppingMush"&gt;Mushrooms&lt;/label&gt;&lt;br&gt;
+
+&lt;input type="checkbox" id="toppingOni" name="toppings" value="onions"&gt;
+&lt;label for="toppingOni"&gt;Onions&lt;/label&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>A Better Button - &lt;button&gt;</h2>
+    <pre><code>&lt;button type="submit"&gt;
+  &lt;strong&gt;Submit&lt;/strong&gt; Your Order
+&lt;/button&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Textarea - Long Text Input</h2>
+    <pre><code>&lt;label for="comments"&gt;Any special instructions?&lt;/label&gt;&lt;br&gt;
+&lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Dropdown - &lt;select&gt;</h2>
+    <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;&lt;br&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value=""&gt;--Please choose an option--&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+  &lt;option value="au"&gt;Australia&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>HTML5 Specialized Inputs</h2>
+
+    <h3>Password</h3>
+    <pre><code>&lt;input type="password" id="userPass" name="userPassword"&gt;</code></pre>
+
+    <h3>Number (with min &amp; max)</h3>
+    <pre><code>&lt;input type="number" id="userAge" name="age" min="18" max="99"&gt;</code></pre>
+
+    <h3>Date</h3>
+    <pre><code>&lt;input type="date" id="birthDate" name="dob"&gt;</code></pre>
+
+    <h3>Other Useful Types</h3>
+    <ul>
+      <li><code>type="color"</code> → Color picker</li>
+      <li><code>type="range"</code> → Slider</li>
+      <li><code>type="file"</code> → File upload</li>
+      <li><code>required</code> → Makes field mandatory</li>
+      <li><code>placeholder</code> → Shows hint text inside input</li>
+    </ul>
+  </div>
+</body>
+</html>
